@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>fake extends</title>
+    <script>
+        function Person(name) {
+            this.name = name;
+        }
+        Person.prototype.name = null;
+        Person.prototype.introduce = function () {
+          return 'My name is ' + this.name;
+        }
+        var p1 = new Person('egoing');
+        document.write(p1.introduce() + "<br />");
+
+        function Programmer(name){
+          this.name = name;
+        }
+        Programmer.prototype = new Person();
+
+    </script>
+</head>
+
+<body>
+  <script>
+    var p1 = new Programmer('soso');
+    document.write(p1.introduce() + '<br /><br>')
+    
+  </script>
+  <h1>상속</h1>
+  javaSctipt에서 생성자를 통해 객체가 생성될 때, prototype라는<br>
+  특수한 프로퍼티에 초기화 작업을 진행하고 객체에 연결된다. <br>
+  javaSctipt의 상속은 이 프로토타입 객체의 링크를 통해 구현된다. <br>
+  그리고 프로토타입 링크의 맨 위에는 java와 마찬가지로 object라는 객체가 존재한다. <br>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <script>
+    // var person = {};
+    // person.name = 'test';
+    // person.introduce = function(){
+    //     return 'My name is ' + this.name;
+    // }
+
+    var person = { // 이 방식이 자바와 유사
+      'name': 'test',
+      'introduce': function () {
+        return 'My name is ' + this.name;
+      }
+    }
+
+    function Person(name) { // 자바스크립트의 생성자
+      this.name = name;
+      this.introduce = function(){
+        return 'My name is ' + this.name;
+      }
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <script>
+    document.write(person.introduce() + '<br />');
+    var test2 = new Person('jung eun kim');
+    document.write(test2.introduce()); // 이제 슬슬 자바와 유사
+  </script>
+</body>
+
+</html>

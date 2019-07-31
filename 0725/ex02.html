@@ -1,0 +1,24 @@
+<html>
+  <title>
+    객체활용
+  </title>
+  <head>
+    <script>
+      var grades = {
+        'list' : {'so' : 100, 'so1': 90, 'so2': 80},
+        'show' : function(){
+          for(var name in this.list){
+            document.write(this.list[name])
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write(grades.list + '<br />');
+      document.write(grades.show())
+
+      </script>
+  </body>
+</html>

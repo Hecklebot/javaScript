@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Standard built In Object</title>
+  javaScript의 표준 내장 객체들
+  <ol>
+    <li>object</li>
+    <li>Function</li>
+    <li>Array</li>
+    <li>String</li>
+    <li>Boolean</li>
+    <li>Number</li>
+    <li>Math</li>
+    <li>Date</li>
+    <li>RegExp</li>
+
+  </ol>
+</head>
+
+<body>
+  <script>
+    var arr = new Array('java', 'c', 'c++', 'python', 'HTML', 'c#', 'kotlin');
+    // function getRandomValueFromArray(arr) { //첫 번째 방법
+    //   // var random = Math.floor(Math.random() * arr.length); //floor: 소수점 버리고 정수값만 취하는 함수
+    //   return arr[random];
+    //   // var index = Math.floor(arr.length * Math.random()); 
+    //   // return arr[index];
+    // }
+
+    Array.prototype.random = function(){ // 오버라이딩과 비슷?
+      var index = Math.floor(this.length * Math.random()); 
+      return this[index]
+    }
+    var arr = new Array('java', 'c', 'c++', 'python', 'HTML', 'c#', 'kotlin');
+    document.write(arr.random() + '<br />'); 
+    var arr2 = new Array('김일성', '김정일', '김정은', '장성택');
+    document.write(arr2.random());
+
+  </script>
+</body>
+
+</html>

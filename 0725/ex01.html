@@ -1,0 +1,31 @@
+<html>
+  <title>
+    객체
+  </title>
+  <head>
+    <script>
+      var grades = {'fir':10, 'sec':20, 'thr':30}
+    </script>
+  </head>
+  <body>
+    <ul>
+    <script>
+      document.write(grades['fir'] + '<br>')
+      document.write(grades['se'+'c'],'<br>')
+      document.write(grades.thr,'<br>')
+      </script>
+    객체란 값을 담는 그릇, 배열과 비슷하다. <br>객체안의 데이터는 key와 value로 이뤄져 있으며, 자바의 Map과 유사<br>
+    <br>반복문으로 객체 다루기<br> for(key in Obejct) -> 향상된 for문과 비슷하다.<br><br>
+      <script>
+      for(key in grades){
+        //document.write(key + "<br />");
+        //document.write(value + "<br />");
+        document.write("<li>key: " +key+ ", value: " +grades[key] + "</li>");
+      }      
+      </script>
+    </ul>
+    key -> key값 리턴<br>
+
+    [key] -> 해당 key값의 value 리턴
+  </body>
+</html>

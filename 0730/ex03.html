@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function func() {
+      if (window === this) { // 전역객체 window, 근데 ===이 무엇을 비교하는지?
+        document.write("window === func()  <br />");
+      }
+    }
+
+    var o = {
+      func: function () { //메서드 내 this는 메서드를 갖고있는 객체변수를 가리킨다.
+        if (o === this) {
+          document.write("o === this");
+        }
+      }
+    }
+
+    var funcThis = null;
+    function Func() {
+      funcThis = this;
+    }
+    var o1 = Func();
+    if (funcThis === window) {
+      document.write('window <br />');
+    }
+    if (funcThis === o1) {
+      document.write('not true');
+    }
+
+    var o2 = new Func();
+    if (funcThis === o2) {
+      document.write('o2 <br />');
+      document.write('------------------------------------------------<br />')
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    func();
+    o.func();
+  </script>
+</body>
+
+</html>
