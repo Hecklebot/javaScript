@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    document.write(location + '<br>')
+    document.write(location.toString() +'<br>');  // 현재 사이트의 주소
+    document.write(location.protocol + '<br>'); // http https ftp 등
+    document.write(location.host + '<br>'); // 컴퓨터 주소
+    document.write(location.port + '<br>');
+    document.write(location.pathname + '<br>');
+    document.write(location.search + '<br>');
+    document.write(location.bookmark + '<br>');
+    document.write('protocol://host:port/pathname?search#hash');
+  </script>
+  <input type="button" value="don't click" onclick="
+    location.href = 'https://google.com';
+  ">
+
+</body>
+</html>
