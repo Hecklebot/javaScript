@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form method="get" action="http://source.unsplash.com/" target="_blank" id="form1">
+<label>이름 </label>
+<input type="text" name="keyword"></input>
+<input type="text" name="feature"></input>
+<input type="submit" onclick="
+
+document.write(form1.action)
+document.write(feature.value)
+document.write('/?')
+document.write(keyword.value);
+
+">
+
+</form>
+
+
+<br><br><br>

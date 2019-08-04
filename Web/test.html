@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title> Pictures</title>
+<head>
+<h3>Pictures</h3>
+</head>
+<p>
+  <body>
+    <input id='night_day' type="button" value="Night" onclick="
+    if(document.querySelector('#night_day').value==='Night'){
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('#night_day').value='Day';
+    }    else{
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+      document.querySelector('#night_day').value='Night'
+    }
+    "></p>
+    <p>
+    <form action="http://source.unsplash.com" method="get" target="_blank">
+      <label>종류 </label>
+      <input type="text">
+      <label>크기 </label>
+      <input type="text">
+      <input type="submit">
+    </form>
+</p>
+<input type="button" value="Find!" onclick="">
+</body><br>
+###submit을 누르면 폼의 정보로 url을 완성하는 것 부터###

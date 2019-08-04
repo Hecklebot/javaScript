@@ -1,0 +1,36 @@
+<html>
+<head>
+  <script>
+    var funcThis = null; 
+     
+    function Func(){
+        funcThis = this;
+    }
+    var o1 = Func();
+    if(funcThis === window){
+        document.write('window <br />');
+    }
+     
+    var o2 = new Func();
+    if(funcThis === o2){
+        document.write('o2 <br />');
+    }
+    
+    var o3 = new Func();
+    if(o1 === o2){
+      document.write('a <br />')
+    }
+    
+  </script>
+
+</head>
+<body>
+  <script>
+    if(o1 === o2){
+      document.write('o1===o2');
+  </script>
+
+</body>
+</html>
+
+
